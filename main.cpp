@@ -1,16 +1,15 @@
 #include <iostream>
 
-#include "combination.hpp"
+#include "combination-recursion.hpp"
 
 using namespace std;
 
-int main(int argc, char const* argv[]) {
-    vector<int> arr1 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 11, 22, 33, 44};
+int main() {
+    vector<int> arr1 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 11};
 
-    Combination<int> cb(arr1);
-
-    // auto result = cb.arrangement(4);
-    auto result = cb.combination(4);
+    Combination<int> cb(arr1, 3);
+    auto result = cb.arrangement();
+    // result = cb.combination();
 
     int idx = 0;
     for (auto res : result) {
